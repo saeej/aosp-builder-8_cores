@@ -31,5 +31,5 @@ task:
       - ./monitor # Monitor script
     build_script: # Actual build script foreground
       - ./build # Build script to run
-    upload_ccache_script: # Upload ccache to cloud foreground
-      - ./upload_ccache # Build script to upload ccache to drive
+    upload_final_script: # Upload ROM zip to cloud foreground
+      - ./upload_final # Build script to upload ROM to drive
