@@ -25,11 +25,13 @@ task:
       memory: 32G # So that we can have ram when needed, 32G highest. 4G per CPU you use.
     download_ccache_background_script: # To download ccache in background
       - ./download_ccache # Ccache download script
+    download_out_background_script: # To download out folder in background
+      - ./download_out # Out folder download script
     sync_script: # To sync sources
       - ./sync # Source sync script
     monitor_background_script: # To monitor ccache and machine status every minute, runs in background
       - ./monitor # Monitor script
     build_script: # Actual build script foreground
       - ./build # Build script to run
-    upload_out_script: # Upload out folder to cloud foreground
-      - ./upload_out # Build script to upload out folder to drive
+    upload_final_script: # Upload ROM zip to cloud foreground
+      - ./upload_final # Build script to upload ROM to drive
