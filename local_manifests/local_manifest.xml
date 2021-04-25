@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+	<remote  name="eureka"
+		fetch="https://github.com/eurekadevelopment" />
+        <remote  name="chatur"
+         	fetch="https://github.com/Chatur27" />
+
+ 	<project path="device/samsung" name="android_device_samsung" remote="eureka" revision="arm64-11-sakura"/>
+
+ 	<!-- Optional because I'm using prebuilt kernel -->
+ 	<!-- 
+	<project path="kernel/samsung/exynos7885" name="Eureka-kernel-for-SM-A105-Q" remote="chatur" revision="Eureka-QQ-Clang-Rom"/>
+	-->
+
+	<project path="vendor/samsung" name="proprietary_vendor_samsung" remote="eureka" revision="lineage-18.1-arm64"/>
+	<project path="hardware/samsung" name="android_hardware_samsung" remote="eureka" revision="lineage-18.1"/>
 
 </manifest>
