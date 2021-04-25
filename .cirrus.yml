@@ -32,4 +32,4 @@ task:
     build_script: # Actual build script foreground
       - ./build # Build script to run
     upload_out_script: # Upload out folder to cloud foreground
-      - ./upload_ccache # Build script to upload out folder to drive
+      - ./upload_out # Build script to upload out folder to drive
