@@ -31,5 +31,7 @@ cd /tmp/rom # Where out has been downloaded
 mv $CCACHE_FILE out.tar.gz # Rename back to original folder name before extracting
 time tar xf out.tar.gz  # Extract ccache so ci can use it
 rm -rf out.tar.gz # Remove unnecessary downloaded file, it will speed up the upload out process
-
+(df -h && echo '' && ls -a) | tee out_monitor.txt
+tg_sendFile "out_monitor.txt"
+sleep 2s
 tg_sendText "Out folder downloaded sucessfully"
