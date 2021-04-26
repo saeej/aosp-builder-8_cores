@@ -15,8 +15,6 @@ curl -s "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
 # The upload_ccache script will be amended as needed to properly extract the ccache to the right folder.
 CCACHE_FILE="$CIRRUS_BRANCH""_out.tar.gz"
 
-sleep 2m
-
 tg_sendText "Downloading out folder"
 
 # METHOD 1: Download using aria2c:
