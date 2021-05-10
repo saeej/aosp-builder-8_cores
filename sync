@@ -29,6 +29,8 @@ echo "$known_hosts" > ~/.ssh/known_hosts
 mkdir -p /tmp/rom # Where to sync source
 cd /tmp/rom
 
+tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}') && tg_sendText "$send_shell" && sleep 2h
+
 tg_sendText "Downloading sources.."
 
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice. Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
@@ -47,5 +49,3 @@ git clone git@github.com:Sakura-Devices/vendor_sakura-priv.git vendor/sakura-pri
 rm -rf .repo # lets remove unnecessary things, so that no storage issue can occur
 
 tg_sendText "Repo Sync Completed!"
-
-tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}') && tg_sendText "$send_shell" && sleep 2h
