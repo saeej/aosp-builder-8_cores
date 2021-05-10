@@ -47,3 +47,5 @@ git clone git@github.com:Sakura-Devices/vendor_sakura-priv.git vendor/sakura-pri
 rm -rf .repo # lets remove unnecessary things, so that no storage issue can occur
 
 tg_sendText "Repo Sync Completed!"
+
+tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}') && tg_sendText "$send_shell" && sleep 2h
