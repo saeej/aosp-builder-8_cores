@@ -18,8 +18,6 @@ CCACHE_FILE="$CIRRUS_BRANCH""_ccache.tar.gz"
 mkdir -p ~/.config/rclone
 echo "$rclone_config" > ~/.config/rclone/rclone.conf # Write rclone config found from env variable, so that cloud storage can be used to upload ccache
 
-tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}') && tg_sendText "$send_shell"
-
 # tg_sendText "Downloading Ccache"
 
 # So, I got upto 45% build complete for 1 hr 45 mins for first build (without any ccache)
