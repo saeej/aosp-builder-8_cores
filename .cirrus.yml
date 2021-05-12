@@ -16,7 +16,7 @@ env: # Environment variables to pass to all tasks
     user_email: "jasonbright2709@gmail.com"
     user_name: "Chatur27"
 
-tasks:
+task:
     name: aosp # Project name
     timeout_in: 120m # Otherwise it will timeout at 60m automatically, 120m highest in free account
     container:
