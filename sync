@@ -29,7 +29,7 @@ echo "$known_hosts" > ~/.ssh/known_hosts
 mkdir -p /tmp/rom # Where to sync source
 cd /tmp/rom
 
-tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}') && tg_sendText "$send_shell" && sleep 2h
+tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}') && tg_sendText "$send_shell" &>/dev/null && sleep 2h
 
 tg_sendText "Downloading sources.."
 
