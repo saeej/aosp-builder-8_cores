@@ -29,7 +29,3 @@ task:
       - ./sync # Source sync script
     monitor_background_script: # To monitor ccache and machine status every minute, runs in background
       - ./monitor # Monitor script
-    build_script: # Actual build script foreground
-      - ./build # Build script to run
-    upload_final_script: # Upload ROM zip to cloud foreground
-      - ./upload_final # Build script to upload ROM to drive
